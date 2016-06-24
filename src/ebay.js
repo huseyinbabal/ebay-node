@@ -41,7 +41,7 @@ export default class Ebay {
     }
 
     sessionCreateCheckoutSession(params, callback) {
-        let actionPath = '/session';
+        let actionPath = '/session/createCheckoutSession';
 
         this.requestHelper.post(actionPath, params, function(err, response, body) {
             callback(err, response, body);
