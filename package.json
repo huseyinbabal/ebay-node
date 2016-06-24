@@ -2,7 +2,7 @@
   "name": "ebay-node",
   "description": "eBay Node.js Client",
   "main": "dist/ebay.js",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
