@@ -14,7 +14,7 @@ export default class RequestHelper {
             'Accept': 'application/json'
         };
 
-        this.apiUrl = 'https://api.ebay.com/buy/v1';
+        this.apiUrl = 'https://api.sandbox.ebay.com/buy/v1';
     }
 
     /**
