@@ -65,7 +65,7 @@ export default class RequestHelper {
             uri: this.apiUrl + options.path,
             method: options.method || 'GET',
             headers: options.headers || this.headers,
-            body: options.body | {},
+            body: options.body || {},
             json: options.json || true,
             qs: options.qs || {}
         };
