@@ -39,4 +39,13 @@ export default class Ebay {
             callback(err, response, body);
         });
     }
+
+    sessionCreateCheckoutSession(params, callback) {
+        let actionPath = '/session';
+
+        this.requestHelper.post(actionPath, params, function(err, response, body) {
+            callback(err, response, body);
+        });
+
+    }
 }
