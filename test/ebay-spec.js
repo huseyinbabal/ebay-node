@@ -1,5 +1,5 @@
 
-import Ebay from '../src/ebay';
+import Ebay from './../src/ebay';
 import {expect} from 'chai';
 
 describe('Ebay', function () {

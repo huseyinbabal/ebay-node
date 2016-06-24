@@ -2,6 +2,7 @@
   "name": "ebay-node",
   "description": "eBay Node.js Client",
   "main": "dist/ebay.js",
+  "version": "1.0.0",
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
@@ -33,7 +34,6 @@
     "request": "^2.72.0"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
     "babel-cli": "^6.10.1",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-2": "^6.5.0",
@@ -66,5 +66,8 @@
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

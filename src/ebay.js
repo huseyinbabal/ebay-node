@@ -10,17 +10,33 @@ export default class Ebay {
         this.requestHelper = new RequestHelper(token);
     }
 
-    itemSearch(q, filter, limit, offset) {
+    itemSearch(q, options, callback) {
         let actionPath = '/item/search';
         let params = {
             q: q,
-            filter: filter,
-            limit: limit || 50,
-            offset: offset || 0
+            filter: options.filter,
+            limit: options.limit || 50,
+            offset: options.offset || 0
         };
 
         this.requestHelper.get(actionPath, params, function(err, response, body) {
-            console.log(err, response, body);
+            callback(err, response, body);
+        });
+    }
+
+    itemGetItem(itemId, callback) {
+        let actionPath = '/item/' + itemId;
+
+        this.requestHelper.get(actionPath, {}, function (err, response, body) {
+            callback(err, response, body);
+        })
+    }
+
+    itemGetItemGroup(itemGroupId, callback) {
+        let actionPath = '/item_group/' + itemGroupId;
+
+        this.requestHelper.get(actionPath, {}, function(err, response, body) {
+            callback(err, response, body);
         });
     }
 }
